@@ -1,9 +1,11 @@
 export default function healthStatus(hero = {}) {
+  let status;
   if (hero.health > 50) {
-    return 'healthy';
+    status = 'healthy';
   } else if (hero.health <= 50 && hero.health >= 15) {
-    return 'wounded';
+    status = 'wounded';
   } else if (hero.health < 15) {
-    return 'critical';
+    status = 'critical';
   }
+  return status;
 }
